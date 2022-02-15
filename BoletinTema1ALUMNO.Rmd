@@ -161,33 +161,31 @@ length(libReturn) #Tengo un total de 3 librerías instaladas
     d.  Utiliza la función **summary**, sobre **cabbages** y **Chile** y observa como, además de otros estadísticos, también devuelve el número de valores perdidos de cada variable.
 
 ```{r}
+#1. Importación
+data("cabbages")
 
+str(cabbages)
+head(cabbages)
+tail(cabbages)
+dim(cabbages)
 
+is.na(cabbages)
+lapply(cabbages, function(x){if (is.na(x)){
+  rm(x)
+}})
 
+data("Chile")
 
+str(Chile)
+head(Chile)
+tail(Chile)
+dim(Chile)
 
+is.na(Chile)
+colSums(sapply(Chile, is.na))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+summary(cabbages)
+summary(Chile)
 ```
 
 5.  Muchas pruebas estadísticas suponen que los datos siguen una distribución Gaussiana. Utiliza la aproximación visual proporcionada por **qqPlot** para determinar si podemos asumir que las variables **HeadWt** y **VitC** del conjunto **cabbages** verifican esta condición.
