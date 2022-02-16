@@ -11,14 +11,14 @@ output:
     toc: no
     toc_depth: 3
     number_sections: yes
-  html_notebook:
-    echo: yes
-    number_sections: yes
-    toc: yes
   html_document:
     echo: yes
     number_sections: yes
     theme: lumen
+    toc: yes
+  html_notebook:
+    echo: yes
+    number_sections: yes
     toc: yes
 language:
   label:
